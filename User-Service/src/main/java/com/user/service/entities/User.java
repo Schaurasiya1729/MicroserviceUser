@@ -1,7 +1,10 @@
 package com.user.service.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import lombok.Data;
 
 @Entity
@@ -13,6 +16,8 @@ public class User {
 	private String name;
 	private String email;
 	private String about;
-	private String rating;
+	
+	@Transient
+	private List<Rating> rating;
 
 }
